@@ -19,14 +19,13 @@ eXplore and Change Directory - rewritten in Go
 ```bash
 go install github.com/saka-naname/xcd-go@latest
 ```
-上記のコマンドを実行後、使用しているシェルに応じて次の設定を行ってください。\
-なお、使用しているGoの環境に応じて `$GOPATH/bin` を `$GOROOT/bin` や `$GOBIN` などに置き換えてください。
+上記のコマンドを実行後、使用しているシェルに応じて次の設定を行ってください。
 
 ### Bash
 `~/.bashrc` に以下の文を追記してください。
 ```sh
 function xcd() {
-    cd $($GOPATH/bin/xcd-go $@)
+    cd $($(go env GOPATH)/bin/xcd-go $@)
 }
 ```
 
@@ -34,7 +33,7 @@ function xcd() {
 `~/.zshrc` に以下の文を追記してください。
 ```sh
 function xcd() {
-    cd $($GOPATH/bin/xcd-go $@)
+    cd $($(go env GOPATH)/bin/xcd-go $@)
 }
 ```
 
