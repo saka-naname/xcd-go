@@ -97,6 +97,10 @@ func loadItems(path string, flags Flags) ([]DirItem, int, int) {
 		items = append(items, DirItem{Name: f.Name(), IsDir: f.IsDir()})
 	}
 
+	if len(items) == 1 {
+		cur = 0
+	}
+
 	return items, cur, 0
 }
 
