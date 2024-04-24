@@ -1,4 +1,8 @@
 # xcd-go
+![GitHub Release](https://img.shields.io/github/v/release/saka-naname/xcd-go?style=for-the-badge&color=green)
+![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/saka-naname/xcd-go?style=for-the-badge)
+
+
 eXplore and Change Directory - rewritten in Go
 
 ## 概要
