@@ -6,6 +6,8 @@ eXplore and Change Directory - rewritten in Go
 
 元々シェルスクリプト製だった[xcd](https://github.com/saka-naname/xcd)をGoで書き直してスムーズに動作するように改善しました。
 
+![20240425_050115](https://github.com/saka-naname/xcd-go/assets/61535180/93bb36e9-f6ea-452c-ad3a-5f14f37c5ace)
+
 ## インストール
 > [!IMPORTANT]
 > Go 1.22+ が必要です
