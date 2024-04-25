@@ -29,7 +29,11 @@ func hideCursor() {
 }
 
 func clearTerm() {
-	fmt.Fprint(os.Stderr, "\x1b[2J\x1b[1;0H")
+	fmt.Fprint(os.Stderr, "\x1b[1;0H\x1b[0J\x1b[1;0H")
+}
+
+func initTerm() {
+	fmt.Fprint(os.Stderr, "\x1b[2J")
 }
 
 func renderItems(dir string, items []DirItem, height int, scr int) {
@@ -134,6 +138,7 @@ func main() {
 
 	// Render
 	hideCursor()
+	initTerm()
 	renderItems(dir, items, height, scr)
 	renderCursor(height, cur)
 
