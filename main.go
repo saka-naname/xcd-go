@@ -113,7 +113,7 @@ func main() {
 		ShowHiddenFiles: false,
 	}
 
-	fd := int(os.Stdin.Fd())
+	fd := int(os.Stdout.Fd())
 	_, height, err := term.GetSize(fd)
 	if err != nil {
 		panic(err)
