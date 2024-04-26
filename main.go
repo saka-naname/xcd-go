@@ -5,7 +5,6 @@ import (
 	"os"
 	"path/filepath"
 	"sort"
-	"syscall"
 
 	"github.com/eiannone/keyboard"
 	"golang.org/x/term"
@@ -114,7 +113,8 @@ func main() {
 		ShowHiddenFiles: false,
 	}
 
-	_, height, err := term.GetSize(syscall.Stdin)
+	fd := int(os.Stdin.Fd())
+	_, height, err := term.GetSize(fd)
 	if err != nil {
 		panic(err)
 	}
